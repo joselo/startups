@@ -1,0 +1,19 @@
+es:
+  activerecord:
+    models:
+      startup: Startup
+  
+    attributes:
+      startup:
+        name: Nombre
+        description: Descripción
+        twitter: Twitter
+        facebook: Facebook
+        url: Sitio Web
+
+    errors:
+      models:
+        startup:
+          attributes:            
+            url:
+              invalid: "es invalido o no responde"

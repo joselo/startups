@@ -1,0 +1,17 @@
+= page_header
+
+- content_for :sidebar do
+  %ul.menu
+    %li= link_to t('users.show.sidebar.edit_your_profile'), me_edit_path
+
+%p
+  = image_tag @user.gravatar_url
+
+%p
+  #{t('.user')}: #{@user.name}
+
+%p
+  #{t('.email')}: #{@user.email if @user.email}
+
+%p
+  #{t('.twitter')}: @#{@user.name}

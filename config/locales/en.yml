@@ -1,0 +1,13 @@
+en:
+  views:
+    pagination:
+      first: "First"
+      previous: "&laquo; Preview"
+      next: "Next &raquo;"
+      last: "Last"
+      truncate: "..."
+
+  nav_user:
+    logged_in_as: "Logged in as"
+    logout: "Logout"
+    login: "Login"

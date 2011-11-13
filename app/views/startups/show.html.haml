@@ -1,0 +1,9 @@
+= page_header
+
+= content_for :sidebar do
+  %ul.menu
+    %li= link_to t('.sidebar.edit'), edit_me_startup_path(@startup)
+    %li= link_to t('.sidebar.destroy'), me_startup_path(@startup), :confirm => t('.are_you_sure'), :method => :delete  
+    %li= link_to t('.sidebar.back'), me_startups_path
+
+.startup= render 'shared/startup', :startup => @startup

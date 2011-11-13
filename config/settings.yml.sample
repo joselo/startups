@@ -1,0 +1,6 @@
+development: &base
+  consumer_key: "HERE YOUR DEV CONSUMER KEY"
+  consumer_secret: "HERE YOUR DE CONSUMER SECRET"
+
+test:
+ <<: *base

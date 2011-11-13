@@ -1,0 +1,14 @@
+= page_header
+
+- content_for :sidebar do
+  %ul.menu
+    %li= link_to t('users.edit.sidebar.back'), me_profile_path
+
+= form_for :user, :url => me_update_path do |f|
+
+  .field
+    = f.label :email
+    = f.text_field :email
+
+  .actions
+  = f.submit t('.sign_in')

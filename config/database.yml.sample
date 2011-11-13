@@ -1,0 +1,17 @@
+default: &local_defaults
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  min_messages: warning
+  encoding: utf8
+  username: postgres
+  password: 
+  template: template0
+
+development:
+  <<: *local_defaults
+  database: startups_development
+
+test:
+  <<: *local_defaults
+  database: startups_test

@@ -1,0 +1,35 @@
+= form_for [:me, @startup], :validate => true do |f|
+
+  .field
+    = f.label :name
+    = f.text_field :name, :class => 'x-long'
+
+  .field
+    = f.label :description
+    = f.text_area :description, :class => 'x-long', :maxlength => Startup::MAX_DESCRIPTION, :rows => 10
+    #description_characters_left
+      %span
+
+  .field
+    = f.label :twitter
+    = f.text_field :twitter, :class => 'x-normal'
+    %small= t('startups.form.twitter_sample').html_safe
+
+  .field
+    = f.label :facebook
+    = f.text_field :facebook, :class => 'x-normal'
+    %small= t('startups.form.facebook_sample').html_safe
+
+  .field
+    = f.label :url
+    = f.text_field :url, :class => 'x-middle'
+    %small= t('startups.form.url_sample')
+
+  .actions
+    = f.submit 'Save'
+
+- content_for :javascript_bottom do
+  :javascript
+    $(document).ready(function(){
+      new Startup();
+    });  

@@ -1,0 +1,209 @@
+//= require_self
+//= require_tree .
+
+@import "compass/reset"
+@import "compass/css3/text-shadow"
+@import "compass/css3/box-shadow"
+@import "compass/utilities"
+@import "compass/layout"
+@import "blueprint"
+
+$blueprint-grid-columns: 8
+$blueprint-grid-width: 100px
+$blueprint-grid-margin: 10px
+$blueprint-container-size: 880px 
+
+$content-grid-columns: 6
+$sidebar-grid-columns: 2
+
+$font_color: #555
+$link_color: #9C2C13
+$border-default: 1px solid #E3E3E3
+
+$color-notice: #259419
+$color-warning: #1C63D6
+$color-error: #D60000
+
+/* Layout */
+ 
+.two-col
+  +container
+  #user_nav
+    +column($blueprint-grid-columns)
+    text-align: right 
+
+  #flash-messages
+    +column($blueprint-grid-columns)
+
+  #header
+    +column($blueprint-grid-columns)
+
+  #footer
+    +column($blueprint-grid-columns)
+
+  #content
+    +column($content-grid-columns)
+
+  #sidebar
+    +column($sidebar-grid-columns)
+
+.startup
+  +container
+  .image
+    +column(2)
+
+  .content
+    +column(4)
+
+/* CSS Pages */
+
+body
+  font-size: 16px
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+  color: $font_color
+  background: #dfdfdf
+
+a
+  text-decoration: none
+  color: $link_color
+  text-decoration: underline
+  &:link
+  &:visited
+  &:active
+  &:hover
+    
+
+h1
+  font-size: 48px
+  font-family: Jockey One, sans-serif
+  text-transform: uppercase
+  border-bottom: $border-default
+  .small
+    font-size: 16px
+    color: #7D7D7B
+  &a
+    color: #C93A1A
+    text-decoration: none
+    &:link
+    &:visited
+    &:active
+    &:hover
+    
+
+h2
+  font-size: 26px
+  margin-bottom: 10px
+  font-family: "Droid Serif", Georgia, Times, "Times New Roman", serif
+  &a
+    color: #333
+    text-decoration: none
+    &:link
+    &:visited
+    &:active
+    &:hover
+      text-decoration: underline    
+
+p
+  line-height: 1.5em
+  margin: 0 0 20px 0
+
+.two-col
+  padding: 0 20px
+  background: #fff
+  +box-shadow(#ccc 2px 2px 10px 10px) 
+
+#user_nav
+  margin-top: 10px
+  ul
+    li
+      display: inline
+      border-right: $border-default
+      margin-right: 5px
+      &.last
+        border-right: none
+    
+
+#footer
+  margin: 40px 0 20px 0
+  text-align: center
+  font-size: 12px
+  color: #999
+
+#header
+  margin-bottom: 50px
+
+#content
+  .page_header
+    margin-bottom: 50px
+    h1
+      background: #333
+      color: #fff
+      padding: 5px 10px
+      margin-left: -20px
+      font-size: 24px
+      font-family: "Droid Serif", Georgia, Times, "Times New Roman", serif
+      border-bottom: none
+      display: inline
+
+#sidebar
+  ul.menu
+    text-align: right
+    li
+      margin-right: -30px
+      margin-bottom: 18px
+      a
+        background: #FFE30D
+        padding: 5px
+        color: #000
+        text-transform: uppercase
+        font-weight: bold
+
+.startup
+  margin-bottom: 60px
+  .content
+    text-align: justify
+
+
+.field
+  margin-bottom: 20px
+  .x-long
+    width: 500px
+  .x-normal
+    width: 200px
+  .x-middle
+    width: 300px
+  input
+    font-size: 120%
+  label
+    display: block
+    font-weight: bold
+    margin-bottom: 2px
+  small
+    display: block
+    font-size: 11px
+    color: #ccc
+    strong
+      font-weight: bold
+
+.field_with_errors
+  label.message
+    color: red
+
+table
+  td, th
+    padding: 5px 15px 5px 0
+  th
+    font-weight: bold
+
+.alert-message
+  padding: 10px
+  margin-bottom: 20px
+  font-weight: bold
+  font-size: 12px
+  color: #fff
+  &.notice
+    background: $color-notice
+  &.warning
+    background: $color-warning
+  &.error
+    background: $color-error

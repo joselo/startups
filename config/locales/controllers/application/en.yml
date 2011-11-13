@@ -1,0 +1,6 @@
+en:
+  application:
+    correct_user:
+      deny: "Access denied."
+    authenticate_user:
+      need_sign_in: "You need to sign in for access to this page."

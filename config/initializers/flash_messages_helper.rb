@@ -1,0 +1,1 @@
+FLASH_NOTICE_KEYS = [:notice, :warning, :error, :success]

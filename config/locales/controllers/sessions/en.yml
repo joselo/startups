@@ -1,0 +1,11 @@
+en:
+  sessions:
+    create:
+      please_enter_your_mail: "Please enter your email address."
+      signed_in: "Signed in!"
+
+    destroy:
+      signed_out: "Signed out!"
+
+    failure:
+      authentication_error: "Authentication error: %{error}"

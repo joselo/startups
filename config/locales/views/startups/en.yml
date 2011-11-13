@@ -1,0 +1,38 @@
+en:
+  startups:
+    index:
+      page_header: 'Your Startups'
+      empty_startups: "you still do not have startups created"
+
+      list:
+        name: Name
+        url: Url
+
+      sidebar:
+        new_startup: 'New startup'
+    
+    show:
+      page_header: 'Startup details'
+      back: 'Back'
+      are_you_sure: 'Are you sure?'
+
+      sidebar:
+        edit: 'Edit'
+        destroy: 'Destroy'
+
+    new:
+      page_header: 'New Statup'
+      back: 'Back'
+
+    edit:
+      page_header: 'Editing Statup'
+      back: 'Back'
+
+      sidebar:
+        show: 'Show'
+    
+    form:
+      twitter_sample: "i.e. http://twitter.com/<strong>your_twitter_handle</strong>"
+      facebook_sample: "i.e. http://facebook.com/<strong>your_facebook_handle</strong>"
+      url_sample: "i.e. http://www.example.com"
+      

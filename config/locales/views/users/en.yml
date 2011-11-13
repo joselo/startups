@@ -1,0 +1,16 @@
+en:
+  users:
+    edit:
+      page_header: "Editing your profile"
+      sign_in: "Save"
+
+      sidebar:
+        back: 'Back'
+    
+    index:
+      page_header: 'Your profile'
+      user: 'User'
+      email: 'Email'
+
+      sidebar:
+        edit_your_profile: 'Edit your profile'

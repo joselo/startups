@@ -1,0 +1,10 @@
+en:
+  startups:
+    create:
+      created: "Your startup was successfully created"
+
+    update:
+      updated: "Your startup was successfully updated"
+
+    destroy:
+      destroyed: "The startup has been removed"

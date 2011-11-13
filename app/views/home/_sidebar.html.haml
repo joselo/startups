@@ -1,0 +1,8 @@
+%ul.menu
+  - if current_user
+    - if current_user.has_startups?
+      %li= link_to t('home.index.sidebar.your_startups'), me_startups_path
+    - else
+      %li= link_to t('home.index.sidebar.new_startup'), new_me_startup_path
+  - else
+    %li= link_to t('home.index.sidebar.new_startup'), new_me_startup_path

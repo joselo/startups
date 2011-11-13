@@ -1,0 +1,9 @@
+%table
+  %tr
+    %th= t('startups.index.list.name')
+    %th= t('startups.index.list.url')
+
+  - @startups.each do |startup|
+    %tr
+      %td= link_to startup.name, me_startup_path(startup)
+      %td= startup.url

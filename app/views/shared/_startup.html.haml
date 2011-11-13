@@ -1,0 +1,10 @@
+.image
+  An image will be here
+
+.content
+  %h2= link_to startup.name, permalink_startup_path(startup)
+  %p= startup.description
+  %ul
+    %li= link_to_twitter startup.twitter
+    %li= link_to_facebook startup.facebook
+    %li= link_to startup.url, startup.url, :target => '_blank'
